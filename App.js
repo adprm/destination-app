@@ -1,17 +1,16 @@
 // import libraries
-import * as React from 'react';
-import { Text, View, ScrollView, Image } from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { Ionicons } from '@expo/vector-icons';
 import { useFonts } from 'expo-font';
-
+import * as React from 'react';
+import { ScrollView, Text, View } from 'react-native';
 // import font
 import KaushanScriptRegular from './src/assets/fonts/KaushanScript-Regular.otf';
-
 // import components
 import ScrollableDestination from './src/components/ScrollableDestination';
+import CategorySection from './src/components/CategorySection';
 
 // Variable createStackNavigator()
 const Stack = createStackNavigator();
@@ -40,7 +39,7 @@ function HomeScreen() {
 // View HomeScreen
 function HomeScreenDetail() {
   return (
-    <View>
+    <View style={{backgroundColor: 'white'}}>
       {/* Scrollable Destinasi */}
       <ScrollView horizontal style={{flexDirection: 'row', paddingLeft: 10, paddingTop: 10}}>
         <ScrollableDestination title="Pura Urun Dalu" location="Bali" img={require('./src/assets/images/pura-urun-dalu.jpg')} />
@@ -51,6 +50,15 @@ function HomeScreenDetail() {
       </ScrollView>
 
       {/* Categori Section */}
+      <View style={{paddingHorizontal: 10, paddingTop: 25}}>
+        <Text style={{fontSize: 18, fontWeight: 'bold'}}>Kategori</Text>
+        <View style={{flexDirection: 'row'}}>
+          <CategorySection img={require('./src/assets/icons/menu.png')} title="Semua" />
+          <CategorySection img={require('./src/assets/icons/candi.png')} title="Candi" />
+          <CategorySection img={require('./src/assets/icons/beach.png')} title="Pantai" />
+          <CategorySection img={require('./src/assets/icons/hotel.png')} title="Hotel" />
+        </View>
+      </View>
       
     </View>
   );
