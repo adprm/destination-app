@@ -10,6 +10,9 @@ import { useFonts } from 'expo-font';
 // import font
 import KaushanScriptRegular from './src/assets/fonts/KaushanScript-Regular.otf';
 
+// import components
+import ScrollableDestination from './src/components/ScrollableDestination';
+
 // Variable createStackNavigator()
 const Stack = createStackNavigator();
 
@@ -40,71 +43,11 @@ function HomeScreenDetail() {
     <View>
       {/* Scrollable Destinasi */}
       <ScrollView horizontal style={{flexDirection: 'row', paddingLeft: 10, paddingTop: 10}}>
-        <View style={{marginRight: 16}}>
-            <View style={{width: 150, height: 150, borderRadius: 10}}>
-                <Image source={require('./src/assets/images/pura-urun-dalu.jpg')} style={{width: undefined, height: undefined, resizeMode: 'cover', flex: 1, borderRadius: 10}} />
-                <View style={{width: '100%', height: '100%', position: 'absolute', top: 0, left: 0, backgroundColor: 'black', opacity: 0.15, borderRadius: 10}}></View>
-            </View>
-            <View style={{position: 'absolute', marginTop: '70%', marginLeft: 10}}>
-              <Text style={{fontSize: 15, fontWeight: 'bold', color: 'white'}}>Pura Urun Dalu</Text>
-              <View style={{flexDirection: 'row', marginTop: 7}}>
-                <Image source={require('./src/assets/icons/location.png')} style={{height: 12, width: 12}} />
-                <Text style={{fontSize: 12, fontWeight: 'normal', color: 'white', paddingLeft: 5}}>Bali</Text>
-              </View>
-            </View>
-        </View>
-        <View style={{marginRight: 16}}>
-            <View style={{width: 150, height: 150, borderRadius: 10}}>
-                <Image source={require('./src/assets/images/candi-borobudur.jpg')} style={{width: undefined, height: undefined, resizeMode: 'cover', flex: 1, borderRadius: 10}} />
-                <View style={{width: '100%', height: '100%', position: 'absolute', top: 0, left: 0, backgroundColor: 'black', opacity: 0.15, borderRadius: 10}}></View>
-            </View>
-            <View style={{position: 'absolute', marginTop: '70%', marginLeft: 10}}>
-              <Text style={{fontSize: 15, fontWeight: 'bold', color: 'white'}}>Candi Borobudur</Text>
-              <View style={{flexDirection: 'row', marginTop: 7}}>
-                <Image source={require('./src/assets/icons/location.png')} style={{height: 12, width: 12}} />
-                <Text style={{fontSize: 12, fontWeight: 'normal', color: 'white', paddingLeft: 5}}>Yogyakarta</Text>
-              </View>
-            </View>
-        </View>
-        <View style={{marginRight: 16}}>
-            <View style={{width: 150, height: 150, borderRadius: 10}}>
-                <Image source={require('./src/assets/images/pantai-kuta.jpg')} style={{width: undefined, height: undefined, resizeMode: 'cover', flex: 1, borderRadius: 10}} />
-                <View style={{width: '100%', height: '100%', position: 'absolute', top: 0, left: 0, backgroundColor: 'black', opacity: 0.15, borderRadius: 10}}></View>
-            </View>
-            <View style={{position: 'absolute', marginTop: '70%', marginLeft: 10}}>
-              <Text style={{fontSize: 15, fontWeight: 'bold', color: 'white'}}>Pantai Kuta</Text>
-              <View style={{flexDirection: 'row', marginTop: 7}}>
-                <Image source={require('./src/assets/icons/location.png')} style={{height: 12, width: 12}} />
-                <Text style={{fontSize: 12, fontWeight: 'normal', color: 'white', paddingLeft: 5}}>Bali</Text>
-              </View>
-            </View>
-        </View>
-        <View style={{marginRight: 16}}>
-            <View style={{width: 150, height: 150, borderRadius: 10}}>
-                <Image source={require('./src/assets/images/candi-prambanan.jpg')} style={{width: undefined, height: undefined, resizeMode: 'cover', flex: 1, borderRadius: 10}} />
-                <View style={{width: '100%', height: '100%', position: 'absolute', top: 0, left: 0, backgroundColor: 'black', opacity: 0.15, borderRadius: 10}}></View>
-            </View>
-            <View style={{position: 'absolute', marginTop: '70%', marginLeft: 10}}>
-              <Text style={{fontSize: 15, fontWeight: 'bold', color: 'white'}}>Candi Prambanan</Text>
-              <View style={{flexDirection: 'row', marginTop: 7}}>
-                <Image source={require('./src/assets/icons/location.png')} style={{height: 12, width: 12}} />
-                <Text style={{fontSize: 12, fontWeight: 'normal', color: 'white', paddingLeft: 5}}>Klaten, Jawa Tengah</Text>
-              </View>
-            </View>
-        </View>
-        <View style={{marginRight: 16}}>
-            <View style={{width: 150, height: 150, borderRadius: 10}}>
-                <Image source={require('./src/assets/images/curug-leuwi-hejo.jpg')} style={{width: undefined, height: undefined, resizeMode: 'cover', flex: 1, borderRadius: 10}} />
-                <View style={{width: '100%', height: '100%', position: 'absolute', top: 0, left: 0, backgroundColor: 'black', opacity: 0.15, borderRadius: 10}}></View>
-            </View>
-            <View style={{position: 'absolute', marginTop: '70%', marginLeft: 10}}>
-              <Text style={{fontSize: 15, fontWeight: 'bold', color: 'white'}}>Curug Leuwi Hejo</Text>
-              <View style={{flexDirection: 'row', marginTop: 7}}>
-                <Image source={require('./src/assets/icons/location.png')} style={{height: 12, width: 12}} />
-                <Text style={{fontSize: 12, fontWeight: 'normal', color: 'white', paddingLeft: 5}}>Bogor</Text>
-              </View>
-            </View>
-        </View>
+        <ScrollableDestination title="Pura Urun Dalu" location="Bali" img={require('./src/assets/images/pura-urun-dalu.jpg')} />
+        <ScrollableDestination title="Curug Leuwi Hejo" location="Bogor" img={require('./src/assets/images/curug-leuwi-hejo.jpg')} />
+        <ScrollableDestination title="Pantai Kuta" location="Bali" img={require('./src/assets/images/pantai-kuta.jpg')} />
+        <ScrollableDestination title="Candi Borobudur" location="Magelang" img={require('./src/assets/images/candi-borobudur.jpg')} />
+        <ScrollableDestination title="Candi Prambanan" location="Yogyakarta" img={require('./src/assets/images/candi-prambanan.jpg')} />
       </ScrollView>
 
       {/* Categori Section */}
