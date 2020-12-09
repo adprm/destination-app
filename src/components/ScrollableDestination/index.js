@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, Image } from 'react-native';
+import { Image, Text, View } from 'react-native';
 
 const ScrollableDestination = (props) => {
     return (
