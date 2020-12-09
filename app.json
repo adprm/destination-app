@@ -1,0 +1,12 @@
+{
+  "name": "aplikasi-destinasi",
+  "displayName": "aplikasi-destinasi",
+  "expo": {
+    "name": "aplikasi-destinasi",
+    "slug": "aplikasi-destinasi",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
