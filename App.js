@@ -5,19 +5,19 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { useFonts } from 'expo-font';
 import * as React from 'react';
-import { ScrollView, Text, View, Image } from 'react-native';
+import { ScrollView, Text, View } from 'react-native';
 // import font
 import KaushanScriptRegular from './src/assets/fonts/KaushanScript-Regular.otf';
 // import components
-import ScrollableDestination from './src/components/ScrollableDestination';
 import CategorySection from './src/components/CategorySection';
 import MostVisited from './src/components/MostVisited';
+import ScrollableDestination from './src/components/ScrollableDestination';
 
 // Variable createStackNavigator()
 const Stack = createStackNavigator();
 
 // Stack HomeScreen
-function HomeScreen() {
+const HomeScreen = () => {
   const [loaded] = useFonts({
     KaushanScriptRegular,
   })
@@ -38,7 +38,7 @@ function HomeScreen() {
 }
 
 // View HomeScreen
-function HomeScreenDetail() {
+const HomeScreenDetail = ({ navigation }) => {
   return (
     <ScrollView style={{backgroundColor: '#e8e8e8'}}>
       {/* Scrollable Destinasi */}
