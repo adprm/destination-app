@@ -32,7 +32,9 @@ const StackHome = () => {
           <Ionicons style={{ fontSize: 30, paddingRight: 10 }} name="ios-search" color='#0266b8' />
         ),
       }} />
-      <Stack.Screen name='Detail Destinasi' component={DetailDestinationPage} />
+      <Stack.Screen name='Detail Destinasi' component={DetailDestinationPage} options={{
+        headerTintColor: '#0266b8'
+      }} />
     </Stack.Navigator>
   );
 }
