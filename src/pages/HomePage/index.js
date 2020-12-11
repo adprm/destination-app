@@ -1,9 +1,11 @@
+// Libraries
 import React from 'react';
 import { ScrollView, Text, View, TouchableOpacity } from 'react-native';
+import { useFonts } from 'expo-font';
+// Components
 import CategorySection from '../../components/CategorySection';
 import MostVisited from '../../components/MostVisited';
 import ScrollableDestination from '../../components/ScrollableDestination';
-
 
 const HomePage = ({ navigation }) => {
     return (
@@ -21,7 +23,7 @@ const HomePage = ({ navigation }) => {
 
             {/* Categori Section */}
             <View style={{paddingHorizontal: 10, paddingVertical: 10, backgroundColor: '#fff'}}>
-                <Text style={{fontSize: 18, fontWeight: 'bold'}}>Kategori</Text>
+                <Text style={{fontSize: 18, fontWeight: 'bold', color: 'black'}}>Kategori</Text>
                 <View style={{flexDirection: 'row'}}>
                 <CategorySection img={require('../../assets/icons/menu.png')} title="Semua" />
                 <CategorySection img={require('../../assets/icons/candi.png')} title="Candi" />
