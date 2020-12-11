@@ -1,0 +1,19 @@
+import React from 'react';
+import { ScrollView, View } from 'react-native';
+import DetailDestination from '../../components/DetailDestination';
+
+const DetailDestinationPage = () => {
+    return (
+        <View style={{backgroundColor: '#e8e8e8'}}>
+            <ScrollView>
+                <DetailDestination title='Pura Urun Dalu' location='Bali' rate='4.2' category='Candi' desc='Pura Ulun Danu Beratan, atau pura Bratan, adalah Hindu utama Shaivite Candi Siwa di Bali , Indonesia . Kompleks candi berada di tepi Danau Bratan di pegunungan dekat Bedugul . Air dari danau melayani seluruh wilayah di daerah aliran keluar; Di hilir terdapat banyak candi air kecil yang dikhususkan untuk setiap asosiasi irigasi.' price='1.000.000' time='5 Hari 4 Malam' imgcategory={require('../../assets/icons/candi.png')} img={require('../../assets/images/pura-urun-dalu.jpg')} />
+                <DetailDestination title='Candi Borobudur' location='Magelang' rate='4.5' category='Candi' desc='Candi Borobudur adalah sebuah candi Buddha yang terletak di Borobudur, Magelang, Jawa Tengah, Indonesia. Candi ini terletak kurang lebih 100 km di sebelah barat daya Semarang, 86 km di sebelah barat Surakarta, dan 40 km di sebelah barat laut Yogyakarta. Candi berbentuk stupa ini didirikan oleh para penganut agama Buddha Mahayana sekitar tahun 800-an Masehi pada masa pemerintahan wangsa Syailendra. Borobudur adalah candi atau kuil Buddha terbesar di dunia, sekaligus salah satu monumen Buddha terbesar di dunia.' price='250.000' time='2 Hari 2 Malam' imgcategory={require('../../assets/icons/candi.png')} img={require('../../assets/images/candi-borobudur.jpg')} />
+                <DetailDestination title='Pantai Nihiwatu' location='Sumba' rate='4.0' category='Pantai' desc='Pantai Nihiwatu berada di posisi ke-17 dari 100 pantai terbaik di dunia dan satu-satunya pantai di Indonesia yang terpilih menjadi pantai terbaik di Asia. Tak hanya itu saja, Pantai Nihiwatu berhasil melangkahi keindahan Pantai Hanalei Bay di Hawaii yang berada di peringkat 27.' price='1.500.000' time='3 Hari 3 Malam' imgcategory={require('../../assets/icons/beach.png')} img={require('../../assets/images/pantai-nihiwatu.jpg')} />
+                <DetailDestination title='Candi Prambanan' location='Yogyakarta' rate='5.0' category='Candi' desc='Candi Prambanan atau Candi Roro Jonggrang translit. Candhi Prambanan) adalah kompleks candi Hindu terbesar di Indonesia yang dibangun pada abad ke-9 masehi. Candi ini dipersembahkan untuk Trimurti, tiga dewa utama Hindu yaitu Brahma sebagai dewa pencipta, Wisnu sebagai dewa pemelihara, dan Siwa sebagai dewa pemusnah. Berdasarkan prasasti Siwagrha nama asli kompleks candi ini adalah Siwagrha (bahasa Sanskerta yang bermakna rumah siwa), dan memang di garbagriha (ruang utama) candi ini bersemayam arca Siwa Mahadewa setinggi tiga meter yang menujukkan bahwa di candi ini dewa Siwa lebih diutamakan.' price='200.000' time='2 Hari 2 Malam' imgcategory={require('../../assets/icons/candi.png')} img={require('../../assets/images/candi-prambanan.jpg')} />
+                <DetailDestination title='Pantai Kuta' location='Bali' rate='5.0' category='Pantai' desc='Pantai Kuta adalah sebuah tempat pariwisata yang terletak kecamatan Kuta, sebelah selatan Kota Denpasar, Bali, Indonesia. Daerah ini merupakan sebuah tujuan wisata turis mancanegara dan telah menjadi objek wisata andalan Pulau Bali sejak awal tahun 1970-an. Pantai Kuta sering pula disebut sebagai pantai matahari terbenam (sunset beach) sebagai lawan dari pantai Sanur. Selain itu, Lapangan Udara I Gusti Ngurah Rai terletak tidak jauh dari Kuta.' price='1.500.000' time='5 Hari 4 Malam' imgcategory={require('../../assets/icons/beach.png')} img={require('../../assets/images/pantai-kuta.jpg')} />
+            </ScrollView>
+        </View>
+    )
+}
+
+export default DetailDestinationPage
