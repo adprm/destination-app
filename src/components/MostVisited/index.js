@@ -12,7 +12,7 @@ const MostVisited = (props) => {
                 <Image source={require('../../assets/icons/location-red.png')} style={{height: 12, width: 12, marginRight: 6}} />
                 <Text style={{fontSize: 14, color: '#a8a8a8'}}>{props.location}</Text>
               </View>
-              <Text style={{fontSize: 16, color: '#0266b8', fontWeight: 'bold'}}>Rp.{props.price}</Text>
+              <Text style={{fontSize: 16, color: '#0266b8', fontWeight: 'bold'}}>Rp{props.price}</Text>
               <View style={{flexDirection: 'row', alignItems: 'center'}}>
                 <Image source={require('../../assets/icons/star.png')} style={{height: 12, width: 12, marginRight: 6}} />
                 <Text style={{fontSize: 14, color: '#a8a8a8'}}>{props.rate}</Text>
