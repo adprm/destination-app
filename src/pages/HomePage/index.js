@@ -15,10 +15,18 @@ const HomePage = ({ navigation }) => {
                 <TouchableOpacity onPress={() => navigation.navigate('Detail Destinasi')}>
                     <ScrollableDestination title="Pura Urun Dalu" location="Bali" img={require('../../assets/images/pura-urun-dalu.jpg')} />
                 </TouchableOpacity>
-                <ScrollableDestination title="Pantai Nihiwatu" location="Sumba" img={require('../../assets/images/pantai-nihiwatu.jpg')} />
-                <ScrollableDestination title="Pantai Kuta" location="Bali" img={require('../../assets/images/pantai-kuta.jpg')} />
-                <ScrollableDestination title="Candi Borobudur" location="Magelang" img={require('../../assets/images/candi-borobudur.jpg')} />
-                <ScrollableDestination title="Candi Prambanan" location="Yogyakarta" img={require('../../assets/images/candi-prambanan.jpg')} />
+                <TouchableOpacity onPress={() => navigation.navigate('Detail Destinasi')}>
+                    <ScrollableDestination title="Pantai Nihiwatu" location="Sumba" img={require('../../assets/images/pantai-nihiwatu.jpg')} />
+                </TouchableOpacity>
+                <TouchableOpacity onPress={() => navigation.navigate('Detail Destinasi')}>
+                    <ScrollableDestination title="Pantai Kuta" location="Bali" img={require('../../assets/images/pantai-kuta.jpg')} />
+                </TouchableOpacity>
+                <TouchableOpacity onPress={() => navigation.navigate('Detail Destinasi')}>
+                    <ScrollableDestination title="Candi Borobudur" location="Magelang" img={require('../../assets/images/candi-borobudur.jpg')} />
+                </TouchableOpacity>
+                <TouchableOpacity onPress={() => navigation.navigate('Detail Destinasi')}>
+                    <ScrollableDestination title="Candi Prambanan" location="Yogyakarta" img={require('../../assets/images/candi-prambanan.jpg')} />
+                </TouchableOpacity>
             </ScrollView>
 
             {/* Categori Section */}
@@ -36,11 +44,21 @@ const HomePage = ({ navigation }) => {
             <View style={{paddingHorizontal: 10, height: 35, justifyContent: 'center', backgroundColor: '#fff'}}>
                 <Text style={{fontSize: 18, fontWeight: 'bold'}}>Paling Banyak Dikunjungi</Text>
             </View>
-            <MostVisited title="Candi Borobudur" location="Magelang" price="250.000" rate="4.5" category="candi" img={require('../../assets/images/candi-borobudur.jpg')} icon={require('../../assets/icons/candi.png')} />
-            <MostVisited title="Pura Urun Dalu" location="Bali" price="1000.000" rate="4.2" category="candi" img={require('../../assets/images/pura-urun-dalu.jpg')} icon={require('../../assets/icons/candi.png')} />
-            <MostVisited title="Pantai Nihiwatu" location="Sumba" price="100.000" rate="4.0" category="curug" img={require('../../assets/images/pantai-nihiwatu.jpg')} icon={require('../../assets/icons/beach.png')} />
-            <MostVisited title="Candi Prambanan" location="Yogyakarta" price="100.000" rate="5.0" category="candi" img={require('../../assets/images/candi-prambanan.jpg')} icon={require('../../assets/icons/candi.png')} />
-            <MostVisited title="Pantai Kuta" location="Bali" price="100.000" rate="5.0" category="pantai" img={require('../../assets/images/pantai-kuta.jpg')} icon={require('../../assets/icons/beach.png')} />
+            <TouchableOpacity onPress={() => navigation.navigate('Detail Destinasi')}>
+                <MostVisited title="Pura Urun Dalu" location="Bali" price="1.000.000" rate="4.2" category="candi" img={require('../../assets/images/pura-urun-dalu.jpg')} icon={require('../../assets/icons/candi.png')} />
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => navigation.navigate('Detail Destinasi')}>
+                <MostVisited title="Candi Borobudur" location="Magelang" price="250.000" rate="4.5" category="candi" img={require('../../assets/images/candi-borobudur.jpg')} icon={require('../../assets/icons/candi.png')} />
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => navigation.navigate('Detail Destinasi')}>
+                <MostVisited title="Pantai Nihiwatu" location="Sumba" price="1.500.000" rate="4.0" category="curug" img={require('../../assets/images/pantai-nihiwatu.jpg')} icon={require('../../assets/icons/beach.png')} />
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => navigation.navigate('Detail Destinasi')}>
+                <MostVisited title="Candi Prambanan" location="Yogyakarta" price="200.000" rate="5.0" category="candi" img={require('../../assets/images/candi-prambanan.jpg')} icon={require('../../assets/icons/candi.png')} />
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => navigation.navigate('Detail Destinasi')}>
+                <MostVisited title="Pantai Kuta" location="Bali" price="1.500.000" rate="5.0" category="pantai" img={require('../../assets/images/pantai-kuta.jpg')} icon={require('../../assets/icons/beach.png')} />
+            </TouchableOpacity>
 
         </ScrollView>
     )
