@@ -7,8 +7,10 @@ import { useFonts } from 'expo-font';
 import * as React from 'react';
 import { Text, View } from 'react-native';
 // import font
-import KaushanScriptRegular from './src/assets/fonts/KaushanScript-Regular.otf';
+import SuperstarPersonalUse from './src/assets/fonts/SuperstarPersonalUse-zEaG.ttf';
+// import component
 import HomePage from './src/pages/HomePage';
+import DetailDestinationPage from './src/pages/DetailDestinationPage';
 
 // Variable createStackNavigator()
 const Stack = createStackNavigator();
@@ -16,7 +18,7 @@ const Stack = createStackNavigator();
 // Stack HomeScreen
 const StackHome = () => {
   const [loaded] = useFonts({
-    KaushanScriptRegular,
+    SuperstarPersonalUse,
   })
 
   if (!loaded) {
@@ -24,21 +26,15 @@ const StackHome = () => {
   }
   return (
     <Stack.Navigator>
-      <Stack.Screen name='DitDestinasi' component={HomePage} options={{
-        headerTitle: <Text style={{fontFamily: 'KaushanScriptRegular', fontSize: 30, color: '#0266b8'}}>DitDestinasi</Text>,
+      <Stack.Screen name='ADestinasi' component={HomePage} options={{
+        headerTitle: <Text style={{fontFamily: 'SuperstarPersonalUse', fontSize: 30, color: '#0266b8'}}>ADestinasi</Text>,
         headerRight: () => (
           <Ionicons style={{ fontSize: 30, paddingRight: 10 }} name="ios-search" color='#0266b8' />
         ),
       }} />
-      <Stack.Screen name='Detail Destinasi' component={DestinationDetailScreen} />
+      <Stack.Screen name='Detail Destinasi' component={DetailDestinationPage} />
     </Stack.Navigator>
   );
-}
-
-const DestinationDetailScreen = () => {
-  return (
-    <View><Text>hy</Text></View>
-  )
 }
 
 const DestinationScreen = () => {
