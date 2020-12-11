@@ -5,19 +5,16 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { useFonts } from 'expo-font';
 import * as React from 'react';
-import { ScrollView, Text, View } from 'react-native';
+import { Text, View } from 'react-native';
 // import font
 import KaushanScriptRegular from './src/assets/fonts/KaushanScript-Regular.otf';
-// import components
-import CategorySection from './src/components/CategorySection';
-import MostVisited from './src/components/MostVisited';
-import ScrollableDestination from './src/components/ScrollableDestination';
+import HomePage from './src/pages/HomePage';
 
 // Variable createStackNavigator()
 const Stack = createStackNavigator();
 
 // Stack HomeScreen
-const HomeScreen = () => {
+const StackHome = () => {
   const [loaded] = useFonts({
     KaushanScriptRegular,
   })
@@ -27,60 +24,29 @@ const HomeScreen = () => {
   }
   return (
     <Stack.Navigator>
-      <Stack.Screen name='DitDestinasi' component={HomeScreenDetail} options={{
+      <Stack.Screen name='DitDestinasi' component={HomePage} options={{
         headerTitle: <Text style={{fontFamily: 'KaushanScriptRegular', fontSize: 30, color: '#0266b8'}}>DitDestinasi</Text>,
         headerRight: () => (
           <Ionicons style={{ fontSize: 30, paddingRight: 10 }} name="ios-search" color='#0266b8' />
         ),
       }} />
+      <Stack.Screen name='Detail Destinasi' component={DestinationDetailScreen} />
     </Stack.Navigator>
   );
 }
 
-// View HomeScreen
-const HomeScreenDetail = ({ navigation }) => {
+const DestinationDetailScreen = () => {
   return (
-    <ScrollView style={{backgroundColor: '#e8e8e8'}}>
-      {/* Scrollable Destinasi */}
-      <ScrollView horizontal style={{flexDirection: 'row', paddingLeft: 10, paddingVertical: 10, backgroundColor: '#fff'}}>
-        <ScrollableDestination title="Pura Urun Dalu" location="Bali" img={require('./src/assets/images/pura-urun-dalu.jpg')} />
-        <ScrollableDestination title="Pantai Nihiwatu" location="Sumba" img={require('./src/assets/images/pantai-nihiwatu.jpg')} />
-        <ScrollableDestination title="Pantai Kuta" location="Bali" img={require('./src/assets/images/pantai-kuta.jpg')} />
-        <ScrollableDestination title="Candi Borobudur" location="Magelang" img={require('./src/assets/images/candi-borobudur.jpg')} />
-        <ScrollableDestination title="Candi Prambanan" location="Yogyakarta" img={require('./src/assets/images/candi-prambanan.jpg')} />
-      </ScrollView>
-
-      {/* Categori Section */}
-      <View style={{paddingHorizontal: 10, paddingVertical: 10, backgroundColor: '#fff'}}>
-        <Text style={{fontSize: 18, fontWeight: 'bold'}}>Kategori</Text>
-        <View style={{flexDirection: 'row'}}>
-          <CategorySection img={require('./src/assets/icons/menu.png')} title="Semua" />
-          <CategorySection img={require('./src/assets/icons/candi.png')} title="Candi" />
-          <CategorySection img={require('./src/assets/icons/beach.png')} title="Pantai" />
-          <CategorySection img={require('./src/assets/icons/hotel.png')} title="Hotel" />
-        </View>
-      </View>
-
-      {/* List item destionation */}
-      <View style={{paddingHorizontal: 10, height: 35, justifyContent: 'center', backgroundColor: '#fff'}}>
-          <Text style={{fontSize: 18, fontWeight: 'bold'}}>Paling Banyak Dikunjungi</Text>
-      </View>
-      <MostVisited title="Candi Borobudur" location="Magelang" price="250.000" rate="4.5" category="candi" img={require('./src/assets/images/candi-borobudur.jpg')} icon={require('./src/assets/icons/candi.png')} />
-      <MostVisited title="Pura Urun Dalu" location="Bali" price="1000.000" rate="4.2" category="candi" img={require('./src/assets/images/pura-urun-dalu.jpg')} icon={require('./src/assets/icons/candi.png')} />
-      <MostVisited title="Pantai Nihiwatu" location="Sumba" price="100.000" rate="4.0" category="curug" img={require('./src/assets/images/pantai-nihiwatu.jpg')} icon={require('./src/assets/icons/beach.png')} />
-      <MostVisited title="Candi Prambanan" location="Yogyakarta" price="100.000" rate="5.0" category="candi" img={require('./src/assets/images/candi-prambanan.jpg')} icon={require('./src/assets/icons/candi.png')} />
-      <MostVisited title="Pantai Kuta" location="Bali" price="100.000" rate="5.0" category="pantai" img={require('./src/assets/images/pantai-kuta.jpg')} icon={require('./src/assets/icons/beach.png')} />
-
-    </ScrollView>
-  );
+    <View><Text>hy</Text></View>
+  )
 }
 
-function DestinationScreen() {
+const DestinationScreen = () => {
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
       <Text>Destinasi!</Text>
     </View>
-  );
+  )
 }
 
 function BookmarkScreen() {
@@ -127,7 +93,7 @@ export default function App() {
           inactiveTintColor: 'gray',
         }}
       >
-        <Tab.Screen name="Halaman Utama" component={HomeScreen} />
+        <Tab.Screen name="Halaman Utama" component={StackHome} />
         <Tab.Screen name="Destinasi" component={DestinationScreen} />
         <Tab.Screen name="Tersimpan" component={BookmarkScreen} />
         <Tab.Screen name="Profil" component={ProfileScreen} />
