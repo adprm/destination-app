@@ -3,8 +3,8 @@ import { View, Text, Image } from 'react-native';
 
 const MostVisited = (props) => {
     return (
-        <View style={{backgroundColor: '#fff', borderRadius: 10, marginTop: 10, marginHorizontal: 10}}>
-          <View style={{paddingLeft: 10, marginVertical: 10, flexDirection: 'row'}}>
+        <View style={{backgroundColor: '#fff', borderRadius: 10, marginHorizontal: 10, marginVertical: 5}}>
+          <View style={{paddingLeft: 10, paddingVertical: 5, flexDirection: 'row'}}>
             <Image source={props.img} style={{width: 80, height: 80, borderRadius: 10}} />
             <View style={{flex: 1, paddingLeft: 10}}>
               <Text style={{fontSize: 17, fontWeight: 'bold'}}>{props.title}</Text>
