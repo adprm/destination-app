@@ -26,6 +26,9 @@ const HomePage = ({ navigation }) => {
                 <TouchableOpacity onPress={() => navigation.navigate('Detail Destinasi')}>
                     <ScrollableDestination title="Candi Prambanan" location="Yogyakarta" img={require('../../assets/images/candi-prambanan.jpg')} />
                 </TouchableOpacity>
+                <TouchableOpacity onPress={() => navigation.navigate('Detail Destinasi')}>
+                    <ScrollableDestination title="Pantai Ora" location="Maluku" img={require('../../assets/images/pantai-ora.jpg')} />
+                </TouchableOpacity>
             </ScrollView>
 
             {/* Category Section */}
@@ -58,7 +61,9 @@ const HomePage = ({ navigation }) => {
             <TouchableOpacity onPress={() => navigation.navigate('Detail Destinasi')}>
                 <MostVisited title="Pantai Kuta" location="Bali" price="1.500.000" rate="5.0" category="pantai" img={require('../../assets/images/pantai-kuta.jpg')} icon={require('../../assets/icons/beach.png')} />
             </TouchableOpacity>
-
+            <TouchableOpacity onPress={() => navigation.navigate('Detail Destinasi')}>
+                <MostVisited title="Pantai Ora" location="Maluku" price="1.300.000" rate="5.0" category="pantai" img={require('../../assets/images/pantai-ora.jpg')} icon={require('../../assets/icons/beach.png')} />
+            </TouchableOpacity>
         </ScrollView>
     )
 }
