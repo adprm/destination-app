@@ -29,7 +29,7 @@ const HomePage = ({ navigation }) => {
                 </TouchableOpacity>
             </ScrollView>
 
-            {/* Categori Section */}
+            {/* Category Section */}
             <View style={{paddingHorizontal: 10, paddingVertical: 10, backgroundColor: '#fff'}}>
                 <Text style={{fontSize: 18, fontWeight: 'bold', color: 'black'}}>Kategori</Text>
                 <View style={{flexDirection: 'row'}}>
