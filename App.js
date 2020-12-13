@@ -47,10 +47,10 @@ const DestinationScreen = () => {
   )
 }
 
-function BookmarkScreen() {
+function HotelScreen() {
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Tersimpan!</Text>
+      <Text>Hotel!</Text>
     </View>
   );
 }
@@ -77,8 +77,8 @@ export default function App() {
               iconName = focused ? 'ios-home' : 'ios-home';
             } else if (route.name === 'Destinasi') {
               iconName = focused ? 'ios-locate' : 'ios-locate';
-            } else if (route.name === 'Tersimpan') {
-              iconName = focused ? 'ios-bookmark' : 'ios-bookmark';
+            } else if (route.name === 'Hotel') {
+              iconName = focused ? 'ios-bed' : 'ios-bed';
             } else if (route.name === 'Profil') {
               iconName = focused ? 'ios-contact' : 'ios-contact';
             }
@@ -93,7 +93,7 @@ export default function App() {
       >
         <Tab.Screen name="Halaman Utama" component={StackHome} />
         <Tab.Screen name="Destinasi" component={DestinationScreen} />
-        <Tab.Screen name="Tersimpan" component={BookmarkScreen} />
+        <Tab.Screen name="Hotel" component={HotelScreen} />
         <Tab.Screen name="Profil" component={ProfileScreen} />
       </Tab.Navigator>
     </NavigationContainer>
