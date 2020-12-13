@@ -1,7 +1,6 @@
 // Libraries
 import React from 'react';
-import { ScrollView, Text, View, TouchableOpacity } from 'react-native';
-import { useFonts } from 'expo-font';
+import { ScrollView, Text, TouchableOpacity, View } from 'react-native';
 // Components
 import CategorySection from '../../components/CategorySection';
 import MostVisited from '../../components/MostVisited';
