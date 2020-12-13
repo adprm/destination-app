@@ -17,4 +17,4 @@ const DetailDestinationPage = () => {
     )
 }
 
-export default DetailDestinationPage
+export default DetailDestinationPage;
