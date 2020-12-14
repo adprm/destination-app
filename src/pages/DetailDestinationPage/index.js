@@ -4,7 +4,7 @@ import DetailDestination from '../../components/DetailDestination';
 
 const DetailDestinationPage = () => {
     return (
-        <View style={{backgroundColor: '#e8e8e8'}}>
+        <View style={{backgroundColor: '#e8e8e8', flex: 1}}>
             <ScrollView>
                 <DetailDestination title='Pura Urun Dalu' location='Bali' rate='4.2' category='Candi' desc='Pura Ulun Danu Beratan, atau pura Bratan, adalah Hindu utama Shaivite Candi Siwa di Bali , Indonesia . Kompleks candi berada di tepi Danau Bratan di pegunungan dekat Bedugul . Air dari danau melayani seluruh wilayah di daerah aliran keluar; Di hilir terdapat banyak candi air kecil yang dikhususkan untuk setiap asosiasi irigasi.' price='1.000.000' time='5 Hari 4 Malam' imgcategory={require('../../assets/icons/candi.png')} img={require('../../assets/images/pura-urun-dalu.jpg')} />
                 <DetailDestination title='Candi Borobudur' location='Magelang' rate='4.5' category='Candi' desc='Candi Borobudur adalah sebuah candi Buddha yang terletak di Borobudur, Magelang, Jawa Tengah, Indonesia. Candi ini terletak kurang lebih 100 km di sebelah barat daya Semarang, 86 km di sebelah barat Surakarta, dan 40 km di sebelah barat laut Yogyakarta. Candi berbentuk stupa ini didirikan oleh para penganut agama Buddha Mahayana sekitar tahun 800-an Masehi pada masa pemerintahan wangsa Syailendra. Borobudur adalah candi atau kuil Buddha terbesar di dunia, sekaligus salah satu monumen Buddha terbesar di dunia.' price='250.000' time='2 Hari 2 Malam' imgcategory={require('../../assets/icons/candi.png')} img={require('../../assets/images/candi-borobudur.jpg')} />
