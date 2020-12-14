@@ -8,7 +8,7 @@ import ScrollableDestination from '../../components/ScrollableDestination';
 
 const HomePage = ({ navigation }) => {
     return (
-        <ScrollView style={{backgroundColor: '#e8e8e8'}}>
+        <ScrollView style={{backgroundColor: '#e8e8e8', flex: 1}}>
             {/* Scrollable Destinasi */}
             <ScrollView horizontal style={{flexDirection: 'row', paddingLeft: 10, paddingVertical: 10, backgroundColor: '#fff'}}>
                 <TouchableOpacity onPress={() => navigation.navigate('Detail Destinasi')}>
