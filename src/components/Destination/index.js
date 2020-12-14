@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, Image, ScrollView } from 'react-native';
+import { ScrollView, View } from 'react-native';
 import ImageScrollDestination from './ImageScrollDestination';
 import TitlePlace from './TitlePlace';
 
