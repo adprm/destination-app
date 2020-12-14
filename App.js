@@ -9,8 +9,9 @@ import { Text, View } from 'react-native';
 // import font
 import SuperstarPersonalUse from './src/assets/fonts/SuperstarPersonalUse-zEaG.ttf';
 // import component
-import HomePage from './src/pages/HomePage';
+import DestinationPage from './src/pages/DestinationPage';
 import DetailDestinationPage from './src/pages/DetailDestinationPage';
+import HomePage from './src/pages/HomePage';
 
 // Variable createStackNavigator()
 const Stack = createStackNavigator();
@@ -39,11 +40,13 @@ const StackHome = () => {
   );
 }
 
-const DestinationScreen = () => {
+const StackDestination = () => {
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Destinasi!</Text>
-    </View>
+    <Stack.Navigator>
+      <Stack.Screen name='Destinasi' component={DestinationPage} options={{
+        headerTintColor: '#0266b8'
+      }} />
+    </Stack.Navigator>
   )
 }
 
@@ -92,7 +95,7 @@ export default function App() {
         }}
       >
         <Tab.Screen name="Halaman Utama" component={StackHome} />
-        <Tab.Screen name="Destinasi" component={DestinationScreen} />
+        <Tab.Screen name="Destinasi" component={StackDestination} />
         <Tab.Screen name="Hotel" component={HotelScreen} />
         <Tab.Screen name="Profil" component={ProfileScreen} />
       </Tab.Navigator>
